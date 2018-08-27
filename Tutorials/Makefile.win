@@ -1,0 +1,67 @@
+# Project: DSAlgorithms
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -std=c++11 -D__DEBUG__
+CC       = gcc.exe -std=c++11 -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = Stack.o Rectangle.o mainfile.o Circle.o RectanglePointers.o Product.o FunctionPointers.o CVector.o functionTemplate.o namespace.o Pointers.o ShellSort.o MergeSort.o classTemplate.o
+LINKOBJ  = Stack.o Rectangle.o mainfile.o Circle.o RectanglePointers.o Product.o FunctionPointers.o CVector.o functionTemplate.o namespace.o Pointers.o ShellSort.o MergeSort.o classTemplate.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = DSA.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Stack.o: Stack.cpp
+	$(CPP) -c Stack.cpp -o Stack.o $(CXXFLAGS)
+
+Rectangle.o: Rectangle.cpp
+	$(CPP) -c Rectangle.cpp -o Rectangle.o $(CXXFLAGS)
+
+mainfile.o: mainfile.cpp
+	$(CPP) -c mainfile.cpp -o mainfile.o $(CXXFLAGS)
+
+Circle.o: Circle.cpp
+	$(CPP) -c Circle.cpp -o Circle.o $(CXXFLAGS)
+
+RectanglePointers.o: RectanglePointers.cpp
+	$(CPP) -c RectanglePointers.cpp -o RectanglePointers.o $(CXXFLAGS)
+
+Product.o: Product.cpp
+	$(CPP) -c Product.cpp -o Product.o $(CXXFLAGS)
+
+FunctionPointers.o: FunctionPointers.cpp
+	$(CPP) -c FunctionPointers.cpp -o FunctionPointers.o $(CXXFLAGS)
+
+CVector.o: CVector.cpp
+	$(CPP) -c CVector.cpp -o CVector.o $(CXXFLAGS)
+
+functionTemplate.o: functionTemplate.cpp
+	$(CPP) -c functionTemplate.cpp -o functionTemplate.o $(CXXFLAGS)
+
+namespace.o: namespace.cpp
+	$(CPP) -c namespace.cpp -o namespace.o $(CXXFLAGS)
+
+Pointers.o: Pointers.cpp
+	$(CPP) -c Pointers.cpp -o Pointers.o $(CXXFLAGS)
+
+ShellSort.o: ShellSort.cpp
+	$(CPP) -c ShellSort.cpp -o ShellSort.o $(CXXFLAGS)
+
+MergeSort.o: MergeSort.cpp
+	$(CPP) -c MergeSort.cpp -o MergeSort.o $(CXXFLAGS)
+
+classTemplate.o: classTemplate.cpp
+	$(CPP) -c classTemplate.cpp -o classTemplate.o $(CXXFLAGS)
