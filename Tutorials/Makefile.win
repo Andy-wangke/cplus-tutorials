@@ -4,8 +4,8 @@
 CPP      = g++.exe -std=c++11 -D__DEBUG__
 CC       = gcc.exe -std=c++11 -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = Stack.o Rectangle.o mainfile.o Circle.o RectanglePointers.o Product.o FunctionPointers.o CVector.o functionTemplate.o namespace.o Pointers.o ShellSort.o MergeSort.o classTemplate.o
-LINKOBJ  = Stack.o Rectangle.o mainfile.o Circle.o RectanglePointers.o Product.o FunctionPointers.o CVector.o functionTemplate.o namespace.o Pointers.o ShellSort.o MergeSort.o classTemplate.o
+OBJ      = Stack.o Rectangle.o mainfile.o Circle.o RectanglePointers.o Product.o FunctionPointers.o CVector.o functionTemplate.o namespace.o Pointers.o ShellSort.o MergeSort.o classTemplate.o DynamicMemory.o ArrayPointer.o Friendship.o
+LINKOBJ  = Stack.o Rectangle.o mainfile.o Circle.o RectanglePointers.o Product.o FunctionPointers.o CVector.o functionTemplate.o namespace.o Pointers.o ShellSort.o MergeSort.o classTemplate.o DynamicMemory.o ArrayPointer.o Friendship.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -65,3 +65,12 @@ MergeSort.o: MergeSort.cpp
 
 classTemplate.o: classTemplate.cpp
 	$(CPP) -c classTemplate.cpp -o classTemplate.o $(CXXFLAGS)
+
+DynamicMemory.o: DynamicMemory.cpp
+	$(CPP) -c DynamicMemory.cpp -o DynamicMemory.o $(CXXFLAGS)
+
+ArrayPointer.o: ArrayPointer.cpp
+	$(CPP) -c ArrayPointer.cpp -o ArrayPointer.o $(CXXFLAGS)
+
+Friendship.o: Friendship.cpp
+	$(CPP) -c Friendship.cpp -o Friendship.o $(CXXFLAGS)

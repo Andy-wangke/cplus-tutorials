@@ -59,12 +59,12 @@ int printArr(int arr[],int n){
 		cout << arr[i] <<" ";
 }
 
-int main(){
-	int a []= {2, 6, 3, 5, 1,11,7,0};
-	int size=sizeof(a)/sizeof(a[0]);
-	mergeSort(a,size);
-	
-	printArr(a,size);
-	
-	return 0;
-}
+//int main(){
+//	int a []= {2, 6, 3, 5, 1,11,7,0};
+//	int size=sizeof(a)/sizeof(a[0]);
+//	mergeSort(a,size);
+//	
+//	printArr(a,size);
+//	
+//	return 0;
+//}
